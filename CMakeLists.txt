@@ -2,8 +2,10 @@ cmake_minimum_required(VERSION 3.20.5)
 
 project(Catch2-SYCL)
 
-# For now use Intel DPC++ 
+# Use Intel DPC++ SYCL implementation by default
 find_package(IntelSYCL REQUIRED)
+# comment above line and uncomment below line to try Open SYCL/hipSYCL instead
+#find_package(hipSYCL REQUIRED)
 
 # Get Catch2
 Include(FetchContent)
