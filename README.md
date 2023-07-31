@@ -8,9 +8,11 @@ DPC++ SYCL implementation.
 
 You will need the following software available
 * A SYCL implementation such as
-  * Intel oneAPI DPC++ 2023.1.0 or newer (tested with 2023.2.0)
-  * Open SYCL (aka hipSYCL) (tested with 0.9.4)
-* CMake 3.20.5 or newer (tested with 3.27.1)
+  * [Intel oneAPI
+    DPC++](https://www.intel.com/content/www/us/en/developer/tools/oneapi/dpc-compiler.html)
+    2023.1.0 or newer (tested with 2023.2.0)
+  * [Open SYCL](https://opensycl.github.io/) (aka hipSYCL) (tested with 0.9.4)
+* [CMake](https://cmake.org/) 3.20.5 or newer (tested with 3.27.1)
 
 ## Build instructions
 
@@ -30,7 +32,7 @@ You will need the following software available
    find_package(IntelSYCL REQUIRED)
    ```
    and uncomment the line
-   ```
+   ```cmake
    find_package(hipSYCL REQUIRED)
    ```
 4. Configure the build. For Intel DPC++, make sure you set `icpx` as the C++ 
