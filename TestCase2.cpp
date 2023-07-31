@@ -19,7 +19,7 @@ TEST_CASE("Test2")
         for (size_t i = 0; i < num_elements; ++i)
         {
             shared_ptr_a[i] = i;
-            shared_ptr_b[i] = 2 * i;
+            shared_ptr_b[i] = i;
         }
 
         usm_queue
@@ -28,7 +28,7 @@ TEST_CASE("Test2")
                           {
                               auto i = idx[0];
                               shared_ptr_c[i] =
-                                  shared_ptr_a[i] + shared_ptr_b[i];
+                                  shared_ptr_a[i] + 2 * shared_ptr_b[i];
                           })
             .wait_and_throw();
 
